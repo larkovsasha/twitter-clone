@@ -4,7 +4,7 @@ import DialogContent from '@material-ui/core/DialogContent';
 import DialogTitle from '@material-ui/core/DialogTitle';
 import IconButton from '@material-ui/core/IconButton';
 import CloseIcon from '@material-ui/icons/Close';
-import {useStylesSignIn} from '../../pages/SignIn';
+import { useStylesSignIn } from '../pages/SignIn';
 
 interface ModalBlockProps {
     title: string;
@@ -19,8 +19,7 @@ export const ModalBlock: React.FC<ModalBlockProps> = ({
                                                           onClose,
                                                           visible = false,
                                                           children,
-                                                      }:
-                ModalBlockProps): React.ReactElement | null => {
+                                                      }: ModalBlockProps): React.ReactElement | null => {
     if (!visible) {
         return null;
     }
@@ -29,7 +28,7 @@ export const ModalBlock: React.FC<ModalBlockProps> = ({
         <Dialog open={visible} onClose={onClose} aria-labelledby="form-dialog-title">
             <DialogTitle id="form-dialog-title">
                 <IconButton onClick={onClose} color="secondary" aria-label="close">
-                    <CloseIcon style={{fontSize: 26}} color="secondary"/>
+                    <CloseIcon style={{ fontSize: 26 }} color="secondary" />
                 </IconButton>
                 {title}
             </DialogTitle>
